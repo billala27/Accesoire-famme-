@@ -186,8 +186,8 @@
 })();
 </script>
 </body>
-<!-- زر عائم في وسط الواجهة -->
-<a href="#about" class="discover-btn">
+<!-- زر عائم مميز -->
+<a href="#more-section" class="discover-btn">
   ✨ إكتشفي أكثر
 </a>
 
@@ -195,60 +195,71 @@
 /* الزر */
 .discover-btn{
   position: fixed;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: -120px; /* مخفي بالبداية */
+  transform: translateX(-50%);
   
-  background: linear-gradient(135deg,#000,#444);
+  background: linear-gradient(135deg,#111,#333);
   color: white;
   
-  padding: 18px 38px;
-  border-radius: 60px;
+  padding: 16px 34px;
+  border-radius: 50px;
   
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   
-  box-shadow:
-    0 0 20px rgba(0,0,0,0.35),
-    0 0 40px rgba(255,255,255,0.15);
-
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  
   z-index: 9999;
+  
+  transition:
+    bottom 0.8s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
-  transition: 0.3s ease;
-  
-  animation: pulse 1.8s infinite;
-  
-  backdrop-filter: blur(10px);
+  animation: pulse 2s infinite;
 }
 
-/* تأثير عند المرور */
+/* عند الظهور */
+.discover-btn.show{
+  bottom: 40px;
+}
+
+/* تأثير hover */
 .discover-btn:hover{
-  transform: translate(-50%, -50%) scale(1.08);
-  letter-spacing: 1px;
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
 }
 
-/* النبض */
-@keyframes pulse {
+/* نبض */
+@keyframes pulse{
   0%{
-    box-shadow:
-      0 0 0 0 rgba(255,255,255,0.45),
-      0 0 20px rgba(0,0,0,0.35);
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
   }
-
   70%{
-    box-shadow:
-      0 0 0 22px rgba(255,255,255,0),
-      0 0 35px rgba(0,0,0,0.45);
+    box-shadow: 0 0 0 20px rgba(255,255,255,0);
   }
-
   100%{
-    box-shadow:
-      0 0 0 0 rgba(255,255,255,0),
-      0 0 20px rgba(0,0,0,0.35);
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
   }
 }
 </style>
+
+<script>
+const discoverBtn = document.querySelector('.discover-btn');
+
+window.addEventListener('scroll', () => {
+
+  // يظهر عند النزول لأسفل الصفحة
+  if(window.scrollY > 500){
+    discoverBtn.classList.add('show');
+  } else {
+    discoverBtn.classList.remove('show');
+  }
+
+});
+</script>
 </html>
 
 <a href="https://www.facebook.com/profile.php?id=100092487375906" 
