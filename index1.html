@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>أزياء نسائية راقية | معرض أزياء عصري</title>
+
+  <meta name="description"
+    content="معرض أزياء نسائية عصري وفاخر يستعرض أحدث صيحات الموضة." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Cairo',sans-serif;
+      background:#fafafa;
+      color:#222;
+    }
+
+    .container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+    }
+
+    /* Navbar */
+    .navbar{
+      background:#fff;
+      padding:20px 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-content{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#222;
+      transition:.3s;
+      font-size:16px;
+    }
+
+    .nav-links a:hover{
+      color:#b88a44;
+    }
+
+    /* HERO FIXED SLIDER */
+    .hero{
+      height:70vh;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+    }
+
+    .slide{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      transition:opacity 1.5s ease;
+    }
+
+    .slide1{
+      background-image:url('images/1778968909041.png');
+      opacity:1;
+    }
+
+    .slide2{
+      background-image:url('images/girl.png');
+      opacity:0;
+    }
+
+    .hero.active .slide1{
+      opacity:0;
+    }
+
+    .hero.active .slide2{
+      opacity:1;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-content h1{
+      font-size:58px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      line-height:1.8;
+    }
+
+    /* Section */
+    .section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:42px;
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    /* Card */
+    .card{
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      transition:.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    .card-content p{
+      color:#666;
+      line-height:1.7;
+    }
+
+    /* Footer */
+    .footer{
+      background:#111;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:60px;
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{font-size:38px;}
+      .hero-content p{font-size:17px;}
+      .section-title{font-size:30px;}
+      .nav-links{gap:15px;}
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+
+      <div class="logo">المجموعات</div>
+
+      <div class="nav-links">
+     <a href="index.html">الرئيسية</a>
+        <a href="index1.html">المجموعات</a>
+        <a href="mailto:chaymabouafia21@gmail.com">تواصل</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO (FIXED STRUCTURE) -->
+  <section class="hero">
+
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+
+    <div class="hero-content">
+      <h1>أزياء نسائية راقية</h1>
+      <p>اكتشفي الأناقة العصرية</p>
+    </div>
+
+  </section>
+
+  <!-- Products -->
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">أحدث المجموعات</h2>
+
+      <div class="grid">
+
+        <div class="card"><img src="images/Photosdessign (1).jpg"><div class="card-content"><h3>المجموعة 1</h3><p>تصميم أنيق وعصري.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (2).jpg"><div class="card-content"><h3>المجموعة 2</h3><p>إطلالة راقية وفاخرة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (3).jpg"><div class="card-content"><h3>المجموعة 3</h3><p>أناقة تناسب جميع المناسبات.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (4).jpg"><div class="card-content"><h3>المجموعة 4</h3><p>خامات عالية الجودة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (5).jpg"><div class="card-content"><h3>المجموعة 5</h3><p>تفاصيل أنثوية ناعمة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (6).jpg"><div class="card-content"><h3>المجموعة 6</h3><p>ستايل عصري جذاب.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (7).jpg"><div class="card-content"><h3>المجموعة 7</h3><p>تصميم فاخر ومميز.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (8).jpg"><div class="card-content"><h3>المجموعة 8</h3><p>أناقة يومية راقية.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (9).jpg"><div class="card-content"><h3>المجموعة 9</h3><p>إطلالة حديثة ومميزة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (10).jpg"><div class="card-content"><h3>المجموعة 10</h3><p>تصميم ناعم وأنيق.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (11).jpg"><div class="card-content"><h3>المجموعة 11</h3><p>تفاصيل عصرية جذابة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (12).jpg"><div class="card-content"><h3>المجموعة 12</h3><p>ستايل فاخر وهادئ.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (13).jpg"><div class="card-content"><h3>المجموعة 13</h3><p>إطلالة مريحة وأنيقة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (14).jpg"><div class="card-content"><h3>المجموعة 14</h3><p>تصميم أنثوي جذاب.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (15).jpg"><div class="card-content"><h3>المجموعة 15</h3><p>أناقة مستوحاة من الموضة الحديثة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (16).jpg"><div class="card-content"><h3>المجموعة 16</h3><p>خامة ناعمة وفاخرة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (17).jpg"><div class="card-content"><h3>المجموعة 17</h3><p>تفاصيل دقيقة ومميزة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (18).jpg"><div class="card-content"><h3>المجموعة 18</h3><p>تصميم أنيق للمناسبات.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (19).jpg"><div class="card-content"><h3>المجموعة 19</h3><p>إطلالة أنثوية راقية.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (20).jpg"><div class="card-content"><h3>المجموعة 20</h3><p>ستايل بسيط وفخم.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (21).jpg"><div class="card-content"><h3>المجموعة 21</h3><p>لمسة عصرية ناعمة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (22).jpg"><div class="card-content"><h3>المجموعة 22</h3><p>تصميم فاخر بخطوط أنيقة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (23).jpg"><div class="card-content"><h3>المجموعة 23</h3><p>أناقة مناسبة لكل الأوقات.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (24).jpg"><div class="card-content"><h3>المجموعة 24</h3><p>إطلالة راقية ومريحة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (25).jpg"><div class="card-content"><h3>المجموعة 25</h3><p>تفاصيل فاخرة مميزة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (26).jpg"><div class="card-content"><h3>المجموعة 26</h3><p>ستايل حديث وأنيق.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (27).jpg"><div class="card-content"><h3>المجموعة 27</h3><p>أناقة بسيطة وجذابة.</p></div></div>
+        <div class="card"><img src="images/Photosdessign (28).jpg"><div class="card-content"><h3>المجموعة 28</h3><p>تصميم عصري فاخر.</p></div></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>جميع الحقوق محفوظة © 2026</p>
+  </footer>
+
+  <script>
+    setInterval(() => {
+      document.querySelector(".hero").classList.toggle("active");
+    }, 4000);
+  </script>
+
+</body>
+
+</html>
